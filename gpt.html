@@ -1,58 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Home</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
-		integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
-		crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-		referrerpolicy="no-referrer" />
-	<link rel="icon" href="./assets/icons/icon.svg">
-    <link rel="stylesheet" href="styles1.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your website description goes here">
+    <meta name="keywords" content="your, keywords, go, here">
+    <meta name="author" content="Your Name">
+    <title>ResQCreators</title>
+    
+    <!-- External CSS libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/icons/icon.svg">
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
-        ({key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg", v: "beta"});</script>
-	<style>
-		a{
-			color: black;
-			margin: 15px;
-		}
-	</style>
+    <link rel="stylesheet" href="styles1.css">
+    
+    <!-- JavaScript for Google Maps API -->
+    <script>
+        (function (g) {
+            var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__",
+                m = document, b = window;
+            b = b[c] || (b[c] = {});
+            var d = b.maps || (b.maps = {}),
+                r = new Set,
+                e = new URLSearchParams;
+            var u = () => h || (h = new Promise(async (f, n) => {
+                await (a = m.createElement("script"));
+                e.set("libraries", [...r] + "");
+                for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]);
+                e.set("callback", c + ".maps." + q);
+                a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
+                d[q] = f;
+                a.onerror = () => h = n(Error(p + " could not load."));
+                a.nonce = m.querySelector("script[nonce]")?.nonce || "";
+                m.head.append(a)
+            }));
+            d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n))
+        })({
+            key: "YOUR_GOOGLE_MAPS_API_KEY",
+            v: "beta"
+        });
+    </script>
+    
+    <!-- Custom CSS for this page -->
+    <style>
+        /* Your custom styles here */
+        a {
+            color: black;
+            margin: 15px;
+        }
+    </style>
 </head>
-
 <body>
-	<header id="home">
-    <nav>
-        <ul class="nav__links">
-            <li>
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#projects">Projects</a>
-                <a href="#maps">Maps</a>
-                <a href="#visits">Visits</a>
-                <a href="#diplomacy">Public Diplomacy</a>
-                <a href="#usefullinks">UsefulLinks</a>
-                <a href="#rti">RTI</a>
-                <a href="#contributors">Contributors</a>
-            </li>
-        </ul>
-    </nav>
-    <a href="#" class="cta">
-        <button>CONTACT</button>
-    </a>
-
-	</header>
-	<div class="hero">
-        
-    <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
-        <img class="image" src="https://images.unsplash.com/photo-1524781289445-ddf8f5695861?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
+    <header id="home">
+        <nav>
+            <ul class="nav__links">
+                <li>
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#maps">Maps</a>
+                    <a href="#visits">Visits</a>
+                    <a href="#diplomacy">Public Diplomacy</a>
+                    <a href="#usefullinks">UsefulLinks</a>
+                    <a href="#rti">RTI</a>
+                    <a href="#contributors">Contributors</a>
+                </li>
+            </ul>
+        </nav>
+        <a href="#" class="cta">
+            <button>CONTACT</button>
+        </a>
+    </header>
+    
+    <!-- Your content sections go here -->
+    <div class="hero">
+        <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+            <img class="image" src="https://images.unsplash.com/photo-1524781289445-ddf8f5695861?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
         <img class="image" src="https://images.unsplash.com/photo-1610194352361-4c81a6a8967e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80" draggable="false" />
         <img class="image" src="https://images.unsplash.com/photo-1618202133208-2907bebba9e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
         <img class="image" src="https://images.unsplash.com/photo-1495805442109-bf1cf975750b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
@@ -61,17 +89,13 @@
         <img class="image" src="https://images.unsplash.com/photo-1613346945084-35cccc812dd5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1759&q=80" draggable="false" />
         <img class="image" src="https://images.unsplash.com/photo-1516681100942-77d8e7f9dd97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" draggable="false" />
       </div>
-		<!-- <video src="./assets/video/meetMinas.mp4" autoplay muted loop class="hero__video"></video> -->
-		<div class="hero-text">
-			<h1 class="hero-text__title">ResQcreators<br> <span class="hero-text__title--line-2">Save everyone.</span></h1>
-			<p class="hero-text__description">
-                save without discrimination.
-				<!-- Traveling reminds us that we are all living on the same planet and can help shift our perspectives and learn from other cultures -->
-			</p>
-			<a href="#" class="hero-text__cta">Save</a>
-		</div>
-	</div>
-	<section id="about" class="about">
+        <div class="hero-text">
+            <h1 class="hero-text__title">ResQcreators<br> <span class="hero-text__title--line-2">Save everyone.</span></h1>
+            <p class="hero-text__description">Save without discrimination.</p>
+            <a href="#" class="hero-text__cta">Save</a>
+        </div>
+    </div>
+    section id="about" class="about">
 		<h2 class="section__title">About <span class="section__title--emphasis">Us</span></h2>
 		<div class="about-content">
 			<img src="./images/Homes.jpg" alt="About" class="about-content__img">
@@ -347,84 +371,37 @@ Source: Conversation with Bing, 10/9/2023
 			</article>
 		</div>
 	</section>
-	<!-- <section>
-		<div class="newsletter-content">
-			<div class="newsletter-info">
-				<h2 class="newsletter-info__title">Do you want to recieve services offers?</h2>
-				<p class="newsletter-info__signup">Sign Up to get updates</p>
-			</div>
-			<form class="newsletter-form">
-				<input type="text" placeholder="name@example.com" class="newsletter-form__input">
-				<button type="submit" class="newsletter-form__submit">Sign Up</button>
-			</form>
-		</div>
-	</section> -->
-	<!-- <section class="gallery" id="gallery">
-		<article class="gallery-item">
-			<img src="./assets/img/photo_0.jpg" alt="Conceição do Mato Dentro" class="gallery-item__thumb">
-			<h4 class="gallery-item__location">Shillong, Meghalaya</h4>
-		</article>
-		<article class="gallery-item">
-			<img src="./assets/img/photo_1.jpg" alt="Diamantina" class="gallery-item__thumb">
-			<h4 class="gallery-item__location">Kohima, Nagaland</h4>
-		</article>
-		<article class="gallery-item">
-			<img src="./assets/img/photo_2.jpg" alt="Tiradentes" class="gallery-item__thumb">
-			<h4 class="gallery-item__location">Aizawl, Mizoram</h4>
-		</article> -->
-		<!-- <article class="gallery-item">
-			<img src="./assets/img/photo_3.jpg" alt="São Lourenço" class="gallery-item__thumb">
-			<h4 class="gallery-item__location">Mumbai, Maharashtra</h4>
-		</article>
-		<article class="gallery-item">
-			<img src="./assets/img/photo_4.jpg" alt="Serro" class="gallery-item__thumb">
-			<h4 class="gallery-item__location">Gomati, Tripura</h4>
-		</article>
-		<article class="gallery-item">
-			<img src="./assets/img/photo_5.jpg" alt="São Tomé das Letras" class="gallery-item__thumb">
-			<h4 class="gallery-item__location">Munnar, Kerala</h4>
-		</article>
-		<article class="gallery-item">
-			<img src="./assets/img/photo_6.jpg" alt="Ipoema" class="gallery-item__thumb">
-			<h4 class="gallery-item__location">Aruku, Andhra Pradesh</h4>
-		</article>
-		<article class="gallery-item">
-			<img src="./assets/img/photo_7.jpg" alt="Ouro Preto" class="gallery-item__thumb">
-			<h4 class="gallery-item__location">Bondila, Arunachal pradesh</h4>
-		</article>
-	</section> -->
-	
-    <footer class="footer">
-        <div class="waves">
-          <div class="wave" id="wave1"></div>
-          <div class="wave" id="wave2"></div>
-          <div class="wave" id="wave3"></div>
-          <div class="wave" id="wave4"></div>
-        </div>
-        <ul class="social-icon">
-          <li class="social-icon__item"><a class="social-icon__link" href="#">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a></li>
-          <li class="social-icon__item"><a class="social-icon__link" href="#">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a></li>
-          <li class="social-icon__item"><a class="social-icon__link" href="#">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a></li>
-          <li class="social-icon__item"><a class="social-icon__link" href="#">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a></li>
-        </ul>
-        <p>&copy;2023 ResQCreaters | All Rights Reserved</p>
-      </footer>
-        </div>
-	<!-- <script src="js/main.js"></script> -->
-    
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    
-    <script src="index.js"></script>
-    <script type="module" src="script.js"></script>
-</body>
+        <footer class="footer">
+            <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+            </div>
+            <ul class="social-icon">
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                <ion-icon name="logo-facebook"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                <ion-icon name="logo-twitter"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                <ion-icon name="logo-linkedin"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="#">
+                <ion-icon name="logo-instagram"></ion-icon>
+                </a></li>
+            </ul>
+            <p>&copy;2023 ResQCreaters | All Rights Reserved</p>
+        </footer>
+            </div>
+        <!-- <script src="js/main.js"></script> -->
+
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+        <script src="index.js"></script>
+        <script type="module" src="script.js"></script>
+    </body>
 
 </html>
